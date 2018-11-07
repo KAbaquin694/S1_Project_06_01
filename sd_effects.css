@@ -14,34 +14,53 @@
 */
 
 /* HTML Styles */
+/* This block of code sizes both the background image used & the entire page of the website. */
 
 html {
-    background-image: url(sd_back1.png);
+    background-image: url('sd_back1.png');
+    background-size: 100%;
     width: 100%;
     background-attachment: fixed;
 }
 
 /* Body Styles */
+/* This section (the most problematic) styles the body by giving color to the background & the background image via gradients & shadows. */
 
 body {
-    background-image: url(sd_back2.png);
-    /* background: radial-gradient(circle at closest-corner 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 35%);
-    background: radial-gradient(circle at closest-corner 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%);
-    background: radial-gradient(at closest-side 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%);
-    background: radial-gradient(5%, 90%, 10%, white 15%, rgba(0, 0, 0, 0) 40%); */
-    background-color: rgb(51, 51, 51);
+    background: url('sd_back2.png'),
+        radial-gradient(circle closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%),
+        radial-gradient(circle closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%),
+        radial-gradient(circle closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%),
+        radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0) 40%);
+    background-color: rgb(151, 151, 151);
     box-shadow: rgb(31, 31, 31) 30px 0px 25px, rgb(31, 31, 31) -30px 0px 25px;
 }
 
 /* Navigation List Styles */
+/* This piece of code just styles the navigation bar by thickening the border, giving it color, & giving it a 3D look. */
 
-/* body>header a {
-    
-} */
+body>header a {
+    border: 5px outset rgb(211, 211, 255);
+}
 
 /* Section Left Styles */
+/* This code styes the section that was given the id "left" & the image in that section given the id "mportrait". */
 
+section#left article h1 {
+    color: rgb(211, 211, 211);
+    text-shadow: black 0px 0px 5px;
+}
 
-
+img#mportrait {
+    filter: drop-shadow(-15px 5px, rgba(51, 51, 51, 0.9));
+    filter: grayscale(.7);
+    filter: opacity(.6);
+    transform: rotateY(180deg);
+}
 
 /* Footer Styles */
+/* The "Footer Styles" section just thickens the footer's border & gives it a different color. */
+footer {
+    border-top: 2px solid rgb(171, 171, 171);
+
+}
